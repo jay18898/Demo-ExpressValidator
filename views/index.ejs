@@ -6,7 +6,7 @@
         <form action="/submit" method="POST">
             <label  for="emailID">Email Id</label>
             <input type="text" placeholder="Email ID" name="emailID" /></br>
-            
+           
             <label  for="password">Password</label>
             <input type="password" placeholder="password" name="password" /></br>
 
@@ -15,8 +15,10 @@
 
             <input type="submit" value="Submit"/>
         </form>
-        <p><% if(errors){ %>
-            <%=errors%>
-        <% } %></p>
+        <p>
+                <% if(errors){ %>
+                    <%=errors%>
+                    <%}%>
+        </p>
     </body>
 </html>
