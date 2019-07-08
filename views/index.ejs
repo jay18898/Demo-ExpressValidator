@@ -3,17 +3,20 @@
 
     </head>
     <body>
-        <form>
-            <label  for="firstName">First Name</label>
-            <input type="text" placeholder="First Name" name="firstName" /></br>
+        <form action="/submit" method="POST">
+            <label  for="emailID">Email Id</label>
+            <input type="text" placeholder="Email ID" name="emailID" /></br>
             
-            <label  for="lastName">Last Name</label>
-            <input type="text" placeholder="First Name" name="lastName" /></br>
+            <label  for="password">Password</label>
+            <input type="password" placeholder="password" name="password" /></br>
 
             <label  for="contactNo">Contact No</label>
-            <input type="text" placeholder="Contact No" name="contactNo" /></br>
+            <input type="number" placeholder="Contact No" name="contactNo" /></br>
 
             <input type="submit" value="Submit"/>
         </form>
+        <p><% if(errors){ %>
+            <%=errors%>
+        <% } %></p>
     </body>
 </html>
