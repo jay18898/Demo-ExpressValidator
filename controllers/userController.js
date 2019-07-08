@@ -14,12 +14,6 @@ bankController.validPage = [
 
 bankController.submitIndex = (req, res) => {
          const errors = validationResult(req);
-        console.log(errors.array())
-        errors.array().map((value,key)=>{
-         var errMsg = value.msg
-         var err = value.param
-        })
-
-    return res.render('../views/index', { result: errors.array()})
+          return res.render('../views/index', { result: errors.array()})
 };
 module.exports = bankController
