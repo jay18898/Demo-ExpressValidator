@@ -5,20 +5,23 @@
     <body>
         <form action="/submit" method="POST">
             <label  for="emailID">Email Id</label>
-            <input type="text" placeholder="Email ID" name="emailID" /></br>
+            <input type="text" placeholder="Email ID" name="emailID" required/></br>
            
             <label  for="password">Password</label>
-            <input type="password" placeholder="password" name="password" /></br>
+            <input type="password" placeholder="password" name="password"required /></br>
 
             <label  for="contactNo">Contact No</label>
-            <input type="number" placeholder="Contact No" name="contactNo" /></br>
+            <input type="number" placeholder="Contact No" name="contactNo"required /></br>
 
             <input type="submit" value="Submit"/>
         </form>
-        <p>
-                <% if(errors){ %>
-                    <%=errors%>
-                    <%}%>
-        </p>
+        
+              
+
+                    <% if(result){
+                         result.forEach(function(obj){ %>
+                            <p><%=obj.msg%></p>
+                    <%}) }%>
+        
     </body>
 </html>
